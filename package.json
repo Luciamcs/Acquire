@@ -1,0 +1,20 @@
+{
+  "name": "acquire",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Luciamcs/Acquire#readme",
+  "bugs": {
+    "url": "https://github.com/Luciamcs/Acquire/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luciamcs/Acquire.git"
+  },
+  "license": "ISC",
+  "author": "Lucia Monteagudo Castellanos",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
