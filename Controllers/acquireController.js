@@ -2,7 +2,7 @@
 const PreparedSample = require("../models/acquire");
 const { fetchKunna, ALIAS } = require("../services/kunnaService");
 
-// Hora objetivo para la predicción (la "hora" que irá en features[3])
+// Hora objetivo para la predicción (la hora que irá en features[3])
 const PREDICTION_HOUR = 23;
 
 // GET /health
@@ -60,7 +60,7 @@ async function createData(req, res) {
     // -----------------------------
     // 3) Llamada a Kunna
     // -----------------------------
-    const result = await fetchKunna(timeStart, timeEnd);
+    const result = await fetchKunna(timeStart, timeEnd); //abre un socket con el http request hasta el http response
     const { columns, values } = result;
 
     // Buscamos índices de columnas relevantes
@@ -80,7 +80,7 @@ async function createData(req, res) {
       });
     }
 
-    // Recuerda: pedimos order: "DESC" → el más reciente primero.
+    // pedimos order: "DESC" → el más reciente primero.
     // Nos quedamos con los 3 primeros días.
     const latest3 = values.slice(0, 3);
 
